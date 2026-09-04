@@ -250,13 +250,13 @@ struct lzma_stream_coder {
 	/// Amount of compressed data in Stream Header + Blocks that have
 	/// already been finished.
 	///
-	/// \note       Use mutex.
+	/// \note       Use mutex when worker threads might be active.
 	uint64_t progress_in;
 
 	/// Amount of uncompressed data in Blocks that have already
 	/// been finished.
 	///
-	/// \note       Use mutex.
+	/// \note       Use mutex when worker threads might be active.
 	uint64_t progress_out;
 
 
